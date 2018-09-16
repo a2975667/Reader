@@ -114,8 +114,9 @@ if __name__ == '__main__':
     print('Setting Airtable Connection...')
     # Airtable Setup
     base_key = os.getenv("BASE_KEY")
+    api_key = os.getenv("API_KEY")
     table_name = 'Reader'
-    airtable = Airtable(base_key, table_name, api_key='keylkAYDFNdjm5aAR')
+    airtable = Airtable(base_key, table_name, api_key=api_key)
     
     print('Updating table...')
     update_table(airtable.get_all())
